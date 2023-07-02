@@ -1,3 +1,4 @@
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from .analysis.statistic import resumeStatistic, misingData, allDataInZero, getDept, getMun, getCodDept, getCodMun
