@@ -153,4 +153,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CORS police
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:4200',
+    'https://ajmaestre.github.io/CoffeeApp'
 ]
