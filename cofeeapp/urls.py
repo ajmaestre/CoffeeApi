@@ -16,8 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import root_res
+
 
 urlpatterns = [
+    path('', root_res.rootPath),
     path('admin/', admin.site.urls),
     path('data-etl/', include('dataETL.urls'))
 ]
+
