@@ -1,7 +1,7 @@
 
 from django.shortcuts import render
 from django.http import HttpResponse
-from .analysis.statistic import resumeStatistic, misingData, allDataInZero, getDept, getMun, getCodDept, getCodMun
+from .analysis.statistic import resumeStatistic, misingData, allDataInZero, getDept, getMun, getCodDept, getCodMun, headData
 from .analysis.cleaning import dataInZero, dataOutliders
 from .analysis.model_logistic import clean_data, make_prediction
 from .analysis.model_lineal import make_prediction_lineal
@@ -37,6 +37,9 @@ def dataOut(request):
 
 def dataClean(request):
     return HttpResponse(clean_data())
+
+def headerData(request):
+    return HttpResponse(headData())
 
 def prediction(request, departamento, municipio, periodo, siembra):
     return HttpResponse(make_prediction(departamento, municipio, periodo, siembra))

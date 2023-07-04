@@ -60,3 +60,7 @@ def allDataInZero():
 # CREAMOS UNA FUNCIÓN PARA RETORNAR LOS DATOS FALTANTES DEL DATASET
 def misingData():
     return df.isna().sum().to_json()
+
+# CREAMOS UNA FUNCIÓN PARA RETORNAR LAS 10 PRIMERAS INSTANCIAS DEL DATASET
+def headData():
+    return df.head().to_json()
