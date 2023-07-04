@@ -64,7 +64,7 @@ def misingData():
 
 # CREAMOS UNA FUNCIÓN PARA RETORNAR LAS 10 PRIMERAS INSTANCIAS DEL DATASET
 def headData():
-    data = df
+    data = df.copy()
     columns_ = ['c_d_dep', 'departamento', 'c_d_mun', 'municipio', 'grupo',
        'subgrupo', 'cultivo', 'desagregacion', 'a_o',
        'periodo', 'area_sembrada', 'area_cosechada', 'produccion',
