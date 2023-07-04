@@ -64,9 +64,10 @@ def misingData():
 
 # CREAMOS UNA FUNCIÓN PARA RETORNAR LAS 10 PRIMERAS INSTANCIAS DEL DATASET
 def headData():
+    data = df
     columns = ['c_d_dep', 'departamento', 'c_d_mun', 'municipio', 'grupo',
        'subgrupo', 'cultivo', 'desagregacion', 'a_o',
        'periodo', 'area_sembrada', 'area_cosechada', 'produccion',
        'rendimiento', 'estado_fisico', 'nombre', 'ciclo']
-    df.columns = columns
-    return df.head().to_json()
+    data.columns = columns
+    return data.head().to_json()
